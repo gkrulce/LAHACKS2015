@@ -5,7 +5,8 @@
 	"content_scripts": [
 		{
 			"matches": ["https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm*"],
-			"js": ["RoomSizeDictionary.js", "insertSize.js"]
+			"js": ["RoomSizeDictionary.js", "insertSize.js"],
+      "css": ["css.css"]
 		}
 	]
 }

@@ -10,7 +10,7 @@ for(var i = 0 ; i < allRows.length ; i++) {
 			hallSize = "Unknown";
 		}
 
-		addHover(allRows[i], hallSize);
+		addHover(allRows[i], hallSize, hall);
 		
 		
 	}catch(err) {
@@ -18,6 +18,10 @@ for(var i = 0 ; i < allRows.length ; i++) {
 	}
 }
 
-function addHover(element, title) {
-	element.title=title;
+function addHover(element, size, title) {
+  element.className += ' the-row';
+  var div = document.createElement('div');
+  div.className = 'fance';
+  div.textContent = 'Actual size of ' + title + ': ' + size;
+  element.appendChild(div);
 }
