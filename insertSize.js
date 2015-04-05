@@ -19,6 +19,5 @@ for(var i = 0 ; i < allRows.length ; i++) {
 }
 
 function addHover(element, title) {
-	var oldHTML = element.outerHTML;
-	element.outerHTML = "<span title=\"" + title + "\">" + oldHTML + "</span>";
+	element.title=title;
 }
