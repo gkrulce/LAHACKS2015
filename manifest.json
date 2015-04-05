@@ -1,0 +1,11 @@
+{
+	"manifest_version" : 2,
+	"name": "Size Demisterizer",
+	"version": "1.0",
+	"content_scripts": [
+		{
+			"matches": ["https://act.ucsd.edu/scheduleOfClasses/scheduleOfClassesStudentResult.htm*"],
+			"js": ["RoomSizeDictionary.js", "insertSize.js"]
+		}
+	]
+}
