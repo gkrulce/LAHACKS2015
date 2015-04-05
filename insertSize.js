@@ -1,4 +1,9 @@
-var allRows = document.getElementsByClassName("sectxt");
+var allRows = Array.prototype.slice.call(document.getElementsByClassName("sectxt"));
+var allRows2 = Array.prototype.slice.call(document.getElementsByClassName("nonenrtxt"));
+
+allRows = allRows.concat(allRows2);
+
+console.log(allRows.length);
 
 for(var i = 0 ; i < allRows.length ; i++) {
 	try {
@@ -11,6 +16,7 @@ for(var i = 0 ; i < allRows.length ; i++) {
 				hallSize = roomDict[hall];
 				break;
 			}
+			hall="??";
 		}
 
 		addHover(allRows[i], hallSize, hall);
